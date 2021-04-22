@@ -1,0 +1,14 @@
+CREATE TABLE Cliente(
+	idCliente serial,
+	nome VARCHAR(20) NOT NULL,
+	sobrenome VARCHAR(20) NOT NULL,
+	usuario VARCHAR(30) NOT NULL,
+	cep VARCHAR(10),
+	rua VARCHAR(50) NOT NULL,
+	numero int,
+	bairro VARCHAR(50),
+	cidade VARCHAR(50) NOT NULL,
+	uf CHAR(2) NOT NULL,
+	CONSTRAINT pk_cliente PRIMARY KEY(idCLiente),
+	CONSTRAINT un_usuario UNIQUE(usuario)
+);
