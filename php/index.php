@@ -12,12 +12,7 @@ $connection = pg_connect("host=$host dbname=$database user=$user password=$passw
 
 
 
-function formatoCep($input)
-{
-    return preg_replace('/^(\d{2})(\d{3})(\d{3})$/', '\\1.\\2-\\3', $input);
-}
 
-$cep = formatoCep($_POST['cep']);
 // idCliente serial,
 // nome VARCHAR(20) NOT NULL,
 // sobrenome VARCHAR(20) NOT NULL,
@@ -43,7 +38,7 @@ $query = "INSERT INTO Cliente(
     '$_POST[nome]',
     '$_POST[sobrenome]',
     '$_POST[usuario]',
-    '$cep',
+    '$_POST[cep]',
     '$_POST[rua]',
     '$_POST[numero]',
     '$_POST[bairro]',
