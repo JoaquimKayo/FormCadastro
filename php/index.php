@@ -17,7 +17,7 @@ function formatoCep($input)
     return preg_replace('/^(\d{2})(\d{3})(\d{3})$/', '\\1.\\2-\\3', $input);
 }
 
-$cep = formatoCep($_POST['cep']);
+$cep = formatoCep($_GET['cep']);
 // idCliente serial,
 // nome VARCHAR(20) NOT NULL,
 // sobrenome VARCHAR(20) NOT NULL,
@@ -40,15 +40,15 @@ $query = "INSERT INTO Cliente(
                                 cidade, 
                                 uf
 ) VALUES (  
-    '$_POST[nome]',
-    '$_POST[sobrenome]',
-    '$_POST[usuario]',
+    '$_GET[nome]',
+    '$_GET[sobrenome]',
+    '$_GET[usuario]',
     '$cep',
-    '$_POST[rua]',
-    '$_POST[numero]',
-    '$_POST[bairro]',
-    '$_POST[cidade]',
-    '$_POST[uf]'
+    '$_GET[rua]',
+    '$_GET[numero]',
+    '$_GET[bairro]',
+    '$_GET[cidade]',
+    '$_GET[uf]'
 )";
 
 $result = pg_query($query);
