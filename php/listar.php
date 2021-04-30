@@ -67,4 +67,4 @@ $result = pg_query($query);
     </tbody>
 </table>
 
-<?php echo "<a href='../index.html'>Voltar</a>"; ?>
+<?php echo "<a href='../index.html' class='btn btn-success'>Cadastrar-se</a>"; ?>
