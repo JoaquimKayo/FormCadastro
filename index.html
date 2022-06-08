@@ -26,7 +26,7 @@
   <style>
     df-messenger {
      --df-messenger-bot-message: #5e5f64;
-     --df-messenger-button-titlebar-color: #0cc23d;
+     --df-messenger-button-titlebar-color: #376a1b;
      --df-messenger-chat-background-color: #fafafa;
      --df-messenger-font-color: white;
      --df-messenger-send-icon: #878fac;
@@ -51,6 +51,7 @@
       </button>
       <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item text-success" href="php/clientes.php">Listar Cadastros</a>
+        <a class="dropdown-item text-success" href="php/analises.php">Listar Análises de Sentimentos</a>
         <div class="dropdown-divider bg-white"></div>
         <a class="dropdown-item text-success" href="#">Log in</a>
       </div>
@@ -277,7 +278,7 @@
 
   </script>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <df-messenger intent="WELCOME" chat-icon="https://image.flaticon.com/icons/png/128/4616/4616758.png" chat-title="Assistente IFSP" agent-id="cb302ad3-1b7c-46d3-837a-59b767584051"
+  <df-messenger intent="WELCOME" chat-icon="./img/robotIcon.png" chat-title="Assistente IFSP" agent-id="cb302ad3-1b7c-46d3-837a-59b767584051"
     language-code="pt-br"></df-messenger>
 
 </body>
