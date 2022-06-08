@@ -1,7 +1,7 @@
 <?php
 include_once "conexaoChatbot.php";
 
-$query = "SELECT * FROM AnaliseSentimento ORDER BY";
+$query = "SELECT * FROM AnaliseSentimento";
 
 $result = pg_query($query);
 
