@@ -99,7 +99,7 @@
 
         <!-- FIM FOOTER-->
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-        <df-messenger intent="WELCOME" chat-icon="./img/robotIcon.png" chat-title="Assistente IFSP" agent-id="cb302ad3-1b7c-46d3-837a-59b767584051"
+        <df-messenger intent="WELCOME" chat-icon="../img/robotIcon.png" chat-title="Assistente IFSP" agent-id="cb302ad3-1b7c-46d3-837a-59b767584051"
     language-code="pt-br"></df-messenger>
     </body>
 
