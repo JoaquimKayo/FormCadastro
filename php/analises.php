@@ -13,7 +13,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <title>Listagem de Cadastros</title>
-
+    <style>
+    df-messenger {
+     --df-messenger-bot-message: #5e5f64;
+     --df-messenger-button-titlebar-color: #0cc23d;
+     --df-messenger-chat-background-color: #fafafa;
+     --df-messenger-font-color: white;
+     --df-messenger-send-icon: #878fac;
+     --df-messenger-user-message: #175c0f;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,7 +42,7 @@
                 </button>
                 <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item text-success" href="../index.html">Cadastrar-se</a>
-                    <a class="dropdown-item text-success" href="./analises.php">Listar Análises de Sentimentos</a>
+                    <a class="dropdown-item text-success" href="./clientes.php">Listar Cadastros</a>
                     <div class="dropdown-divider bg-white"></div>
                     <a class="dropdown-item text-success" href="#">Log in</a>
                 </div>
@@ -43,14 +52,14 @@
         <!--FIM BARRA-->
 
         <main class="container p-3 px-5 shadow rounded mt-3">
-            <h3 class="text-center mb-5">Listagem de Clientes</h3>
+            <h3 class="text-center mb-5">Listagem de Analises</h3>
             
             <span id="conteudo"></span>
 
         </main>
         <script type="text/javascript">
             $(document).ready(function() {
-                $.post('listar.php', function(retorna) {
+                $.post('listarChatbot.php', function(retorna) {
                     $("#conteudo").html(retorna);
                 });
             });
@@ -89,6 +98,8 @@
         </footer>
 
         <!-- FIM FOOTER-->
+        <df-messenger intent="WELCOME" chat-icon="./img/robotIcon.png" chat-title="Assistente IFSP" agent-id="cb302ad3-1b7c-46d3-837a-59b767584051"
+    language-code="pt-br"></df-messenger>
     </body>
 
 </html>
